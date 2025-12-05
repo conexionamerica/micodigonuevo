@@ -43,24 +43,24 @@ const DiscountBanner = () => {
     }, []);
 
     return (
-        <div className="banner-fade-in bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white shadow-lg relative overflow-hidden py-2 px-3 sm:py-3 sm:px-4">
+        <div className="banner-fade-in bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white shadow-lg relative overflow-hidden py-3 px-4 sm:py-4 sm:px-5">
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute w-64 h-64 bg-white rounded-full -top-32 -left-32 animate-pulse"></div>
                 <div className="absolute w-64 h-64 bg-white rounded-full -bottom-32 -right-32 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10 gap-2 sm:gap-3">
+            <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10 gap-2.5 sm:gap-3">
                 {/* Main Content */}
                 <div className="flex flex-col md:flex-row items-center w-full justify-center gap-2">
-                    <div className="flex flex-col md:flex-row items-center gap-1.5">
-                        <AlertCircle className="flex-shrink-0 animate-pulse w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="flex flex-col md:flex-row items-center gap-2">
+                        <AlertCircle className="flex-shrink-0 animate-pulse w-5 h-5 sm:w-6 sm:h-6" />
                         <div className="flex-1">
-                            <h3 className="text-sm sm:text-base lg:text-lg font-black flex items-center gap-1 justify-center md:justify-start">
-                                <Percent className="w-3 h-3 sm:w-4 sm:h-4" />
+                            <h3 className="text-base sm:text-lg lg:text-xl font-black flex items-center gap-1.5 justify-center md:justify-start">
+                                <Percent className="w-4 h-4 sm:w-5 sm:h-5" />
                                 Promoção de Lançamento!
                             </h3>
-                            <p className="text-xs sm:text-sm leading-tight px-1 md:px-0 mt-0.5">
+                            <p className="text-sm sm:text-base leading-tight px-1 md:px-0 mt-1">
                                 <span className="font-extrabold text-yellow-300">50% OFF</span> no Personalizado
                                 <span className="hidden sm:inline"> • </span>
                                 <span className="block sm:inline mt-0.5 sm:mt-0">
@@ -72,9 +72,9 @@ const DiscountBanner = () => {
                 </div>
 
                 {/* Countdown Timer */}
-                <div className="flex items-center gap-1.5">
-                    <Clock className="animate-pulse w-3 h-3 sm:w-4 sm:h-4" />
-                    <div className="flex gap-1 sm:gap-1.5">
+                <div className="flex items-center gap-2">
+                    <Clock className="animate-pulse w-4 h-4 sm:w-5 sm:h-5" />
+                    <div className="flex gap-1.5 sm:gap-2">
                         {[
                             { value: timeLeft.days, label: 'Dias' },
                             { value: timeLeft.hours, label: 'Horas' },
@@ -82,10 +82,10 @@ const DiscountBanner = () => {
                             { value: timeLeft.seconds, label: 'Seg' }
                         ].map((item, index) => (
                             <div key={index} className="flex flex-col items-center">
-                                <div className="bg-white/20 backdrop-blur-sm rounded px-1.5 py-0.5 min-w-[28px] sm:min-w-[32px]">
-                                    <span className="text-xs sm:text-sm font-black">{String(item.value).padStart(2, '0')}</span>
+                                <div className="bg-white/20 backdrop-blur-sm rounded px-2 py-1 min-w-[32px] sm:min-w-[40px]">
+                                    <span className="text-sm sm:text-base font-black">{String(item.value).padStart(2, '0')}</span>
                                 </div>
-                                <span className="text-[9px] sm:text-[10px] font-semibold mt-0.5">{item.label}</span>
+                                <span className="text-[10px] sm:text-xs font-semibold mt-0.5">{item.label}</span>
                             </div>
                         ))}
                     </div>
@@ -94,8 +94,8 @@ const DiscountBanner = () => {
                 {/* CTA Button */}
                 <Link to="/pacotes" className="w-full md:w-auto">
                     <Button
-                        size="sm"
-                        className="w-full md:w-auto bg-white text-red-600 hover:bg-gray-100 font-bold shadow-lg text-xs sm:text-sm px-4 py-2"
+                        size="default"
+                        className="w-full md:w-auto bg-white text-red-600 hover:bg-gray-100 font-bold shadow-lg text-sm sm:text-base px-5 py-2.5"
                     >
                         Ver Pacotes 🎁
                     </Button>
