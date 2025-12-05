@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Check } from 'lucide-react';
+import DiscountBanner from './DiscountBanner';
 
 const HeroSection = () => {
     const [name, setName] = useState('');
@@ -98,6 +99,10 @@ const HeroSection = () => {
                             Garantir minha aula grátis 🎁
                         </Button>
                     </form>
+                </div>
+                {/* Banner de promoción debajo del formulario */}
+                <div className="mt-4">
+                    <DiscountBanner />
                 </div>
             </div>
         </div>
