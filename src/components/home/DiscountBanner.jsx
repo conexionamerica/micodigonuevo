@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { AlertCircle, Percent, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -44,33 +43,28 @@ const DiscountBanner = () => {
     }, []);
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white py-6 md:py-5 px-4 md:px-6 shadow-2xl relative overflow-hidden"
-        >
+        <div className="banner-fade-in bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 text-white shadow-lg relative overflow-hidden py-2 px-3 sm:py-3 sm:px-4">
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-20">
                 <div className="absolute w-64 h-64 bg-white rounded-full -top-32 -left-32 animate-pulse"></div>
                 <div className="absolute w-64 h-64 bg-white rounded-full -bottom-32 -right-32 animate-pulse" style={{ animationDelay: '1s' }}></div>
             </div>
 
-            <div className="container mx-auto flex flex-col items-center justify-center gap-4 md:gap-6 text-center relative z-10">
+            <div className="container mx-auto flex flex-col items-center justify-center text-center relative z-10 gap-2 sm:gap-3">
                 {/* Main Content */}
-                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 w-full justify-center">
-                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-3">
-                        <AlertCircle className="h-12 w-12 md:h-8 md:w-8 flex-shrink-0 animate-pulse" />
+                <div className="flex flex-col md:flex-row items-center w-full justify-center gap-2">
+                    <div className="flex flex-col md:flex-row items-center gap-1.5">
+                        <AlertCircle className="flex-shrink-0 animate-pulse w-4 h-4 sm:w-5 sm:h-5" />
                         <div className="flex-1">
-                            <h3 className="text-2xl md:text-xl lg:text-2xl font-black flex items-center gap-2 justify-center md:justify-start mb-2 md:mb-0">
-                                <Percent className="h-7 w-7 md:h-6 md:w-6" />
-                                Promoção Especial de Lançamento!
+                            <h3 className="text-sm sm:text-base lg:text-lg font-black flex items-center gap-1 justify-center md:justify-start">
+                                <Percent className="w-3 h-3 sm:w-4 sm:h-4" />
+                                Promoção de Lançamento!
                             </h3>
-                            <p className="text-base md:text-sm lg:text-base mt-2 md:mt-1 leading-relaxed">
-                                <span className="font-extrabold text-yellow-300 text-lg md:text-base">50% OFF</span> no Pacote Personalizado
+                            <p className="text-xs sm:text-sm leading-tight px-1 md:px-0 mt-0.5">
+                                <span className="font-extrabold text-yellow-300">50% OFF</span> no Personalizado
                                 <span className="hidden sm:inline"> • </span>
-                                <span className="block sm:inline mt-1 sm:mt-0">
-                                    <span className="font-extrabold text-yellow-300 text-lg md:text-base">30% OFF</span> nos demais pacotes
+                                <span className="block sm:inline mt-0.5 sm:mt-0">
+                                    <span className="font-extrabold text-yellow-300">30% OFF</span> nos demais
                                 </span>
                             </p>
                         </div>
@@ -78,9 +72,9 @@ const DiscountBanner = () => {
                 </div>
 
                 {/* Countdown Timer */}
-                <div className="flex items-center gap-3 md:gap-4">
-                    <Clock className="h-6 w-6 md:h-5 md:w-5 animate-pulse" />
-                    <div className="flex gap-2 md:gap-3">
+                <div className="flex items-center gap-1.5">
+                    <Clock className="animate-pulse w-3 h-3 sm:w-4 sm:h-4" />
+                    <div className="flex gap-1 sm:gap-1.5">
                         {[
                             { value: timeLeft.days, label: 'Dias' },
                             { value: timeLeft.hours, label: 'Horas' },
@@ -88,10 +82,10 @@ const DiscountBanner = () => {
                             { value: timeLeft.seconds, label: 'Seg' }
                         ].map((item, index) => (
                             <div key={index} className="flex flex-col items-center">
-                                <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 md:px-2 md:py-1 min-w-[50px] md:min-w-[45px]">
-                                    <span className="text-2xl md:text-xl font-black">{String(item.value).padStart(2, '0')}</span>
+                                <div className="bg-white/20 backdrop-blur-sm rounded px-1.5 py-0.5 min-w-[28px] sm:min-w-[32px]">
+                                    <span className="text-xs sm:text-sm font-black">{String(item.value).padStart(2, '0')}</span>
                                 </div>
-                                <span className="text-xs mt-1 font-semibold">{item.label}</span>
+                                <span className="text-[9px] sm:text-[10px] font-semibold mt-0.5">{item.label}</span>
                             </div>
                         ))}
                     </div>
@@ -100,14 +94,14 @@ const DiscountBanner = () => {
                 {/* CTA Button */}
                 <Link to="/pacotes" className="w-full md:w-auto">
                     <Button
-                        size="lg"
-                        className="w-full md:w-auto bg-white text-red-600 hover:bg-gray-100 font-bold shadow-xl whitespace-nowrap px-8 py-6 md:py-4 text-lg transform hover:scale-105 transition-all"
+                        size="sm"
+                        className="w-full md:w-auto bg-white text-red-600 hover:bg-gray-100 font-bold shadow-lg text-xs sm:text-sm px-4 py-2"
                     >
                         Ver Pacotes 🎁
                     </Button>
                 </Link>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

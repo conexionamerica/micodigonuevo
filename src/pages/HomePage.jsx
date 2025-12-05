@@ -20,7 +20,6 @@ const HomePage = () => {
     </Helmet>
     <DiscountBanner />
     <HeroSection />
-    <DiscountBanner />
     <PackagesCTASection />
     <FeaturesSection />
     <StatsSection />
@@ -29,7 +28,6 @@ const HomePage = () => {
     <PackageComparison />
     <PackagesAfterTestimonialsCTA />
     <FaqSection />
-    <SocialProofPopup />
   </>;
 };
 export default HomePage;
