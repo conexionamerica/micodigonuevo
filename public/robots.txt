@@ -1,0 +1,23 @@
+# robots.txt para Conexión América
+# Permite que todos os buscadores indexem o site
+
+User-agent: *
+Allow: /
+
+# Bloquear áreas administrativas
+Disallow: /professor/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.conexionamerica.com.br/sitemap.xml
+
+# Buscadores específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /

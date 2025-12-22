@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubaConnect - Instrucciones de Instalación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .container {
+            background: white;
+            color: #333;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #075E54;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            background: #f5f5f5;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 15px;
+            border-left: 5px solid #25D366;
+        }
+
+        .option h2 {
+            color: #075E54;
+            margin-top: 0;
+        }
+
+        .steps {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .step {
+            padding: 15px;
+            margin: 10px 0;
+            background: #e8f5e9;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .step strong {
+            color: #2E7D32;
+            font-size: 1.2em;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        .code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>📱 CubaConnect</h1>
+        <p class="subtitle">Mensajería Optimizada para Redes Lentas</p>
+
+        <div class="success">
+            <strong>✅ ¡Tu aplicación está lista!</strong><br>
+            Solo necesitas instalarla en tu teléfono. Elige una de las opciones abajo.
+        </div>
+
+        <!-- OPCIÓN 1 -->
+        <div class="option">
+            <h2>🚀 OPCIÓN 1: Expo Go (MÁS RÁPIDO - 2 minutos)</h2>
+            <p><strong>Recomendado si quieres probar AHORA</strong></p>
+
+            <div class="steps">
+                <div class="step">
+                    <strong>Paso 1:</strong> En tu teléfono, descarga "Expo Go" de Google Play Store
+                    <br><a href="https://play.google.com/store/apps/details?id=host.exp.exponent" class="button"
+                        target="_blank">
+                        Descargar Expo Go
+                    </a>
+                </div>
+
+                <div class="step">
+                    <strong>Paso 2:</strong> En tu PC, abre una terminal en la carpeta CubaConnect y ejecuta:
+                    <div class="code">npm start</div>
+                </div>
+
+                <div class="step">
+                    <strong>Paso 3:</strong> Escanea el código QR que aparece con Expo Go
+                </div>
+
+                <div class="step">
+                    <strong>Paso 4:</strong> ¡Listo! La app se cargará en tu teléfono
+                </div>
+            </div>
+
+            <div class="success">
+                ✅ Ventajas: Instantáneo, gratis, no necesitas cuenta
+            </div>
+        </div>
+
+        <!-- OPCIÓN 2 -->
+        <div class="option">
+            <h2>📦 OPCIÓN 2: Generar APK (20 minutos)</h2>
+            <p><strong>Si quieres un APK instalable</strong></p>
+
+            <div class="steps">
+                <div class="step">
+                    <strong>Paso 1:</strong> Crea una cuenta GRATIS en Expo
+                    <br><a href="https://expo.dev/signup" class="button" target="_blank">
+                        Crear Cuenta en Expo
+                    </a>
+                </div>
+
+                <div class="step">
+                    <strong>Paso 2:</strong> Haz doble clic en el archivo:
+                    <div class="code">GENERAR_APK.bat</div>
+                    (Está en la carpeta CubaConnect)
+                </div>
+
+                <div class="step">
+                    <strong>Paso 3:</strong> Sigue las instrucciones en pantalla:
+                    <ul>
+                        <li>Ingresa tu email de Expo</li>
+                        <li>Ingresa tu contraseña</li>
+                        <li>Espera 10-20 minutos</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <strong>Paso 4:</strong> Te dará un LINK para descargar el APK
+                </div>
+
+                <div class="step">
+                    <strong>Paso 5:</strong> Abre ese link en tu teléfono y descarga el APK
+                </div>
+
+                <div class="step">
+                    <strong>Paso 6:</strong> Instala el APK en tu teléfono
+                </div>
+            </div>
+
+            <div class="warning">
+                ⚠️ Requiere: Cuenta en Expo (gratis) y esperar 20 minutos
+            </div>
+        </div>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <div class="option">
+            <h2>ℹ️ Información Adicional</h2>
+
+            <h3>📊 Ahorro de Datos vs WhatsApp:</h3>
+            <ul>
+                <li>📝 Mensajes de texto: <strong>90% menos datos</strong></li>
+                <li>📞 Llamadas de voz: <strong>88% menos datos</strong></li>
+                <li>📹 Videollamadas: <strong>90% menos datos</strong></li>
+                <li>🖼️ Imágenes: <strong>80% menos datos</strong></li>
+            </ul>
+
+            <h3>🌐 Funciona en:</h3>
+            <ul>
+                <li>✅ 2G (GPRS/EDGE) - 50-200 kbps</li>
+                <li>✅ 3G - 200 kbps - 2 Mbps</li>
+                <li>✅ 4G/LTE - 2+ Mbps</li>
+                <li>✅ WiFi</li>
+            </ul>
+
+            <h3>✨ Características:</h3>
+            <ul>
+                <li>💬 Mensajería con compresión automática</li>
+                <li>📞 Llamadas de voz optimizadas</li>
+                <li>📹 Videollamadas adaptativas</li>
+                <li>📴 Modo offline con cola de mensajes</li>
+                <li>📡 Detección automática de red</li>
+            </ul>
+        </div>
+
+        <!-- AYUDA -->
+        <div class="option">
+            <h2>❓ ¿Necesitas Ayuda?</h2>
+            <p>Consulta estos archivos en la carpeta CubaConnect:</p>
+            <ul>
+                <li><strong>README.md</strong> - Documentación completa</li>
+                <li><strong>COMO_INSTALAR.md</strong> - Guía de instalación</li>
+                <li><strong>TESTING.md</strong> - Guía de pruebas</li>
+                <li><strong>BUILD_GUIDE.md</strong> - Cómo generar APK</li>
+            </ul>
+        </div>
+
+        <div class="success" style="text-align: center; margin-top: 30px;">
+            <h2>🎉 ¡Disfruta CubaConnect!</h2>
+            <p>Optimizada especialmente para Cuba 🇨🇺</p>
+        </div>
+    </div>
+</body>
+
+</html>

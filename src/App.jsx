@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
 import DiscountBanner from '@/components/home/DiscountBanner';
+import GoogleAdsConversion from '@/components/GoogleAdsConversion';
 import { useAuth } from '@/contexts/SupabaseAuthContext';
 import { supabase } from '@/lib/customSupabaseClient';
 
@@ -61,6 +62,7 @@ const ProtectedRoute = ({ children, role }) => {
 function App() {
   return (
     <Router>
+      <GoogleAdsConversion />
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />

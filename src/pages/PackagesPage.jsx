@@ -100,8 +100,16 @@ const PackagesPage = () => {
     return (
         <>
             <Helmet>
-                <title>Pacotes - Conexión América</title>
-                <meta name="description" content="Escolha o plano de espanhol ideal para você e comece sua jornada para a fluência." />
+                <title>Pacotes e Preços - Curso de Espanhol Online | Conexión América</title>
+                <meta name="description" content="Escolha o plano de espanhol ideal para você. Pacotes a partir de R$9 por aula. Aulas ao vivo com professores nativos, horários flexíveis e metodologia personalizada. Teste grátis disponível!" />
+                <meta name="keywords" content="preço curso espanhol, pacotes de espanhol online, quanto custa curso de espanhol, planos de espanhol, aulas de espanhol preço, curso espanhol valor, pacote aulas espanhol, espanhol online preço" />
+                <link rel="canonical" href="https://www.conexionamerica.com.br/pacotes" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Pacotes e Preços - Curso de Espanhol Online | Conexión América" />
+                <meta property="og:description" content="Escolha o plano de espanhol ideal para você. Pacotes a partir de R$9 por aula. Aulas ao vivo com professores nativos." />
+                <meta property="og:url" content="https://www.conexionamerica.com.br/pacotes" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div className="bg-sky-50 py-20 lg:py-28">
                 <div className="container mx-auto px-6">

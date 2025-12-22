@@ -1,9 +1,13 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { trackWhatsAppClick } from './GoogleAdsConversion';
 
 const WhatsAppFloat = () => {
     const handleWhatsAppClick = () => {
+        // Rastrear conversión de Google Ads
+        trackWhatsAppClick();
+
         const message = encodeURIComponent('¡Hola! Tengo interés en conocer más sobre los cursos de español de Conexión América.');
         const phoneNumber = '555198541835';
         window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
